@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'qa.guru'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.8.2',
+            'commons-io:commons-io:2.11.0',
+            'com.codeborne:pdf-test:1.7.0',
+            'com.codeborne:xls-test:1.5.0',
+            'com.opencsv:opencsv:5.5.2',
+            'com.codeborne:selenide:5.25.0',
+            'org.assertj:assertj-core:3.22.0',
+            'org.apache.poi:poi:3.9',
+            'org.apache.poi:poi-ooxml:5.2.0',
+            'org.slf4j:slf4j-simple:2.0.0-alpha6'
+    )
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
